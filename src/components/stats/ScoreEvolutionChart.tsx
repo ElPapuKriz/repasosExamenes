@@ -19,7 +19,7 @@ export function ScoreEvolutionChart({ data }: { data: ChartPoint[] }) {
             <XAxis dataKey="attempt" tick={{ fontSize: 12 }} />
             <YAxis domain={[0, 100]} tick={{ fontSize: 12 }} />
             <Tooltip
-              formatter={(value: number) => [`${value}%`, 'Puntaje']}
+              formatter={(value) => [`${value}%`, "Puntaje"]}
               labelFormatter={(label, payload) => payload?.[0]?.payload?.title ?? `Intento ${label}`}
             />
             <Line type="monotone" dataKey="score" stroke="#6C63FF" strokeWidth={3} dot={{ r: 4 }} />
